@@ -1,0 +1,66 @@
+{% extends './dashboard.html' %}
+
+{% load i18n %}
+
+{% block main %}
+<br><br><br><br><br><br>
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <label for=""><h1>{% trans "domain" %} : {{obj.domain}}</h1></label>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-12">
+            <label for=""><h1>{% trans "Adresse" %} : {{obj.adresse}}</h1></label>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-12">
+            <label for=""><h1>{% trans "Entreprise" %} : {{obj.entreprise}}</h1></label>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <label for=""><h1>{% trans "Numero" %} : {{obj.phone}}</h1></label>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-12">
+           {% trans "message" %}:" <cite>{{obj.message}}</cite>"
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+          <h1>{{obj.date}}</h1>
+        </div>
+    </div>
+
+    
+
+</div>
+{% endblock %}
+
+
+{% block aside %}
+
+
+{% endblock %}

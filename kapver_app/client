@@ -1,0 +1,42 @@
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# Paramètres de configuration de l'email
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST = 'ssl0.ovh.net'
+EMAIL_PORT = 587  # Le port 587 est généralement utilisé avec TLS
+EMAIL_HOST_USER = 'kontakt@kapver.com'
+EMAIL_HOST_PASSWORD = 'Kapver@2024'
+
+
+def send_email(subject, message, to_email):
+    # Création de l'objet e-mail
+    msg = MIMEMultipart()
+    msg['From'] = EMAIL_HOST_USER
+    msg['To'] = to_email
+    msg['Subject'] = subject
+
+    # Ajout du corps du message
+    msg.attach(MIMEText(message, 'plain'))
+
+    # Connexion au serveur SMTP d'OVH
+    try:
+        server = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)
+        server.starttls()
+        server.login(EMAIL_HOST_USER, EMAIL_HOST_PASSWORD)
+        text = msg.as_string()
+        server.sendmail(EMAIL_HOST_USER, to_email, text)
+        print("Email envoyé avec succès!")
+    except Exception as e:
+        print(f"Erreur lors de l'envoi de l'email: {str(e)}")
+    finally:
+        server.quit()
+
+# Exemple d'utilisation de la fonction send_email
+subject = "Test d'envoi d'email"
+message = "Ceci est un test d'envoi d'email via le serveur SMTP d'OVH."
+to_email = "thierry.devp@gmail.com"
+
+send_email(subject, message, to_email)

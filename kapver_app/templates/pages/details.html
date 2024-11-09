@@ -1,0 +1,79 @@
+{% extends '../index.html' %}
+
+{% load i18n %}
+
+{% block body %}
+
+<br><br><br>
+
+<div class="container" style="overflow: hidden;">
+  <div class="row">
+    <div class="col-8">
+      <h1>{{obj.titre}}</h1>
+      {% for message in messages %}
+      <h1 class="alert alert-success">{{message}}</h1>
+      {% endfor %}
+    </div>
+    <div class="col-4"> <i>{{obj.date}}</i></div>
+    <div class="col-12" style=" width:80%; margin-left: 100px;" >
+      <p>
+        {{ obj.entreprise }} {% trans "recherche un candidat pour un poste situé à" %} {{ obj.lieu }}. {% trans "Le poste nécessite un engagement de" %} {{ obj.nombre_heure }} {% trans "heures par semaine" %}.
+      </p>        
+
+      <p>{{obj.description|safe}}</p>
+    </div>
+    
+    <div class="col-6"> <br><br>
+      <center>    
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+          {% trans "Postuler a cette offre" %}
+        </button>
+      </center>
+    </div>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">{% trans "Candidature" %}</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+                <div class="container">
+                    <div class="col-12">
+                        <label for="">{% trans "Nom:" %}</label>
+                        <input type="text" name="nom" class="form-control"  required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="">{% trans "votre message" %}</label>
+                        <textarea name="message"  id="" cols="30" rows="10" class="form-control">
+                            
+                        </textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="">{% trans "votre Cv" %}</label>
+                        <input type="file" name="cv" class='form-control' required>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Fermer" %}</button>
+              <button type="submit" class="btn btn-primary">{% trans "Postuler"  %}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+ {% endblock %}

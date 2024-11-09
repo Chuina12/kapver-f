@@ -1,0 +1,50 @@
+{% extends './dashboard.html' %}
+
+{% load i18n %}
+
+{% block main %}
+<br><br><br><br><br><br>
+
+
+  <center> <a href="{% url 'dashboard'  %}" class="btn btn-danger">{% trans "Retour" %}</a>  </center>
+  <br><br><br>
+  {% for message in messages %}
+    <h1 class="alert alert-info">{{message}}</h1>
+    {% endfor %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">{% trans "bilden" %}</th>
+        <th scope="col">{% trans "Datum" %}</th>
+        <th scope="col">{% trans "Aktion" %}</th>
+        {% comment %} <th scope="col">{% trans "Action 1" %}</th> {% endcomment %}
+        {% comment %} <th scope="col">Action 2</th> {% endcomment %}
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for item in query %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td> <a href="voirfichesig/{{item.pk}}"><i class="bi bi-file-pdf"></i>Bilden</a> </td>
+        <td>{{item.date_signer_entreprise}}</td>
+        {% comment %} <td>{{item.pays}}</td> {% endcomment %}
+        {% comment %} <td>{{item.date}}</td> {% endcomment %}
+       
+        <td><a href="/sendfiche/{{item.pk}}" class="btn btn-info">eine E-Mail senden</a></td>
+        <td><a href="/approuver/{{item.id}}" class="btn btn-info">Genehmigen</a></td>
+       
+      </tr>
+     {% endfor %}
+     
+    </tbody>
+
+   
+  </table>
+  
+{% endblock %}
+
+
+{% block aside %}
+{% endblock %}

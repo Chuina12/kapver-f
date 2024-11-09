@@ -1,0 +1,35 @@
+{% extends './dashboard.html' %}
+
+{% load i18n %}
+
+{% block main %}
+<br><br><br><br><br><br>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">{% trans "Gerant" %}</th>
+        <th scope="col">{% trans "Entreprise" %}</th>
+        <th scope="col">{% trans "email" %}</th>
+        <th scope="col">{% trans "Adresse" %}</th>
+        <th scope="col">{% trans "Total Travailleur" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+
+       
+      <tr>
+        <th scope="row">1</th>
+        <td>{{obj.gerant}}</td>
+        <td>{{obj.nom_entreprise}}</td>
+        <td>{{obj.email}}</td>
+       <td>{{obj.adresse}}</td>
+       <td>{{obj.nombre_travailler}}</td>
+    
+    </tbody>
+  </table>
+{% endblock %}
+
+
+{% block aside %}
+{% endblock %}

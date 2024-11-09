@@ -1,0 +1,39 @@
+{% extends './dashboard.html' %}
+
+{% load i18n %}
+
+{% block main %}
+<br><br><br><br><br><br>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        {% comment %} <th scope="col">#</th> {% endcomment %}
+        <th scope="col">entreprise</th>
+        <th scope="col">employer</th>
+        <th scope="col">fiche</th>
+        {% comment %} <th scope="col">Action 1</th>
+        <th scope="col">Action 2</th> {% endcomment %}
+      </tr>
+    </thead>
+    <tbody>
+
+
+        {% for i in fich %}
+       
+      <tr>
+        {% comment %} <th scope="row">1</th> {% endcomment %}
+        <td>{{i.employer.entreprise}}</td>
+        <td>{{i.employer}}</td>
+        <td><a href="/media/{{i.fiche}}"> <i class="bi bi-file-pdf"></i> Voir fiche</a></td>
+      </tr>
+
+      {% endfor %}
+   
+     
+    </tbody>
+  </table>
+{% endblock %}
+
+
+{% block aside %}
+{% endblock %}

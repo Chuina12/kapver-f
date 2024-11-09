@@ -1,0 +1,21 @@
+[2024-08-19 11:33:08,146: WARNING/MainProcess] /home/kapver-final/venv_kapver_final/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-19 11:33:08,156: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2024-08-19 11:33:08,157: WARNING/MainProcess] /home/kapver-final/venv_kapver_final/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-19 11:33:08,159: INFO/MainProcess] mingle: searching for neighbors
+[2024-08-19 11:33:09,177: WARNING/MainProcess] /home/kapver-final/venv_kapver_final/lib/python3.10/site-packages/celery/app/control.py:56: DuplicateNodenameWarning: Received multiple replies from node name: celery@server1.feulefack.com.
+Please make sure you give each node a unique nodename using
+the celery worker `-n` option.
+  warnings.warn(DuplicateNodenameWarning(
+
+[2024-08-19 11:33:09,177: INFO/MainProcess] mingle: all alone
+[2024-08-19 11:33:09,196: INFO/MainProcess] celery@server1.feulefack.com ready.

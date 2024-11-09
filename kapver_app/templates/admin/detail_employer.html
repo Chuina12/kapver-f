@@ -1,0 +1,36 @@
+{% extends './dashboard.html' %}
+
+
+{% load i18n %}
+{% block main %}
+<br><br><br><br><br><br>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        {% comment %} <th scope="col">#</th> {% endcomment %}
+        <th scope="col">{% trans "entreprise" %}</th>
+        <th scope="col">{% trans "employer" %}</th>
+        <th scope="col">{% trans "date" %}</th>
+        <th scope="col">{% trans "Voir" %}</th>
+        {% comment %} <th scope="col">Action 2</th> {% endcomment %}
+      </tr>
+    </thead>
+    <tbody>
+
+     
+      <tr>
+        {% comment %} <th scope="row">{{forloop.count}}</th> {% endcomment %}
+        <td>{{obj.entreprise}}</td>
+        <td>{{obj.nom}}</td>
+        <td> {% blocktrans %}{{obj.date}}{% endblocktrans %}</td>
+        <td> <a href="/fich_employer/{{obj.pk}}">voir fiche <i class="bi bi-file-pdf"></i></a></td>
+      </tr>
+   
+     
+    </tbody>
+  </table>
+{% endblock %}
+
+
+{% block aside %}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'admin/dashboard.html' %}
+
+
+{% block main %}
+
+<br><br><br><br><br><br>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Premier textarea -->
+            <div class="form-group">
+              <label for="textarea1">Der beantragte Urlaub wird bewilligt /abgelehnt, weil</label>
+              <textarea class="form-control"  name="textarea1"rows="3" required></textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <!-- Deuxième textarea -->
+            <div class="form-group">
+              <label for="textarea2">(Unterschrift des Arbeitgebers):</label>
+              <textarea class="form-control" name='textarea2' rows="3" required></textarea>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <label for="">Der beantragte Urlaub wird bewilligt /abgelehnt, weil:</label>
+
+        <input type="submit" value="repondre"  class='form-control btn btn-success'>
+        <br><br>
+        (Unterschrift des Arbeitgebers)
+        <input type="reset" value="annuler" class='form-control btn btn-danger'>
+
+      </div>
+</form>
+
+ {% endblock %}
+
+ {% block aside %}
+ {% endblock %}

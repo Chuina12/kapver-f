@@ -1,0 +1,48 @@
+{% extends './dashboard.html' %}
+
+{% load i18n %}
+
+{% block main %}
+<br><br><br><br><br><br>
+
+
+  <center> <a href="{% url 'dashboard'  %}" class="btn btn-danger">{% trans "Retour" %}</a>  </center>
+  <br><br><br>
+  {% for message in messages %}
+    <h1 class="alert alert-info">{{message}}</h1>
+    {% endfor %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">{% trans "dokumente" %}</th>
+        <th scope="col">{% trans "datum" %}</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for item in query %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{item.name}} </td>
+        <td><a href="voirdokumente/{{item.pk}}"><i class="bi bi-file-pdf"></i></a></td>
+
+
+        <td>{{item.date}}</td>
+
+
+      </tr>
+     {% endfor %}
+
+    </tbody>
+
+
+  </table>
+
+{% endblock %}
+
+
+{% block aside %}
+{% endblock %}

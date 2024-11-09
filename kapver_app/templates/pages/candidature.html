@@ -1,0 +1,69 @@
+{% extends '../index.html' %}
+
+
+{% load i18n %}
+{% block body %}
+
+
+
+
+    <br><br>
+    {% block form %}
+    {% load i18n %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        <div class="container">
+            <center><h1>{% trans "Espace Candidature" %}</h1></center>
+            <p>{% trans "Une fois votre candidature soumise chez Kapver, vous pouvez être rassuré(e) que notre équipe experte s'engagera pleinement à trouver pour vous le meilleur emploi disponible. Avec notre vaste réseau d'entreprises et de recruteurs, nous mettrons tout en œuvre pour vous offrir des opportunités professionnelles qui correspondent à vos qualifications et aspirations." %}</p>
+            <div class="row">
+                {% for message in messages %}
+                <h1 class="alert alert-success"> {% blocktrans %}{{message}}{% endblocktrans %}</h1>
+                {% endfor %}
+              <div class="col-6">
+                <label for="">{% trans "Intitule:" %} </label>
+               <select name="intitule" id="" class="form-control">
+                <option  name="intitule">{% trans "Monsieur:" %}</option>
+                <option  name="intitule">{% trans "Madame:" %}</option>
+               </select>
+              </div>
+              <div class="col-6">
+                <label for="">{% trans "nom:" %}</label>
+                <input type="text" name="nom" class="form-control" required>
+              </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="">{% trans "Message de motivation" %}</label>
+                    <textarea  name="message" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+
+            </div>
+            <br>
+
+            <div class="row">
+                <label for="">{% trans "votre CV:" %}</label>
+
+               <div class="col-12"> <input type="file" name='cv' class="form-control" required></div>
+            </div>
+            <br><br>
+
+            <div class="row">
+                <div class="col-4">
+                    <input type="submit" class="btn btn-success">
+                </div>
+
+                <div class="col-4">
+                    <input type="reset" class="btn btn-danger">
+                </div>
+            </div>
+
+        </div>
+    </form>
+    {% endblock %}
+ 
+    
+
+
+{% endblock %}

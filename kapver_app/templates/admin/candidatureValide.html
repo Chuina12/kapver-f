@@ -1,0 +1,40 @@
+{% extends './dashboard.html' %}
+{% load i18n %}
+
+
+{% block main %}
+<br><br><br><br><br><br>
+<center>
+    <h1>{% trans 'Liste der bestätigten Bewerbungen' %}</h1>
+</center>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">{% trans "nom" %}</th>
+        <th scope="col">{% trans "Poste" %}</th>
+        <th scope="col">{% trans "voir" %}</th>
+        <th scope="col">{% trans "Action 1" %}</th>
+        <!-- <th scope="col">{% trans "Action 2" %}</th> -->
+      </tr>
+    </thead>
+    <tbody>
+
+    {% for item in candidat %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td> {% blocktrans %}Bewerbung von {% endblocktrans %} {{item.nom}}</td>
+        <td> {{item.offre}}</td>
+        <td><a href="detailcandidat/{{item.pk}}"><i class="bi bi-eye"></i></a></td>
+        <td><a href="supprimer/{{item.pk}}" class="btn btn-danger">{% trans "Supprimer" %}</a></td>
+        <!-- <td><a href="lu/{{item.pk}}" class="btn btn-info">{% trans "Lu" %}</a></td> -->
+      </tr>
+    {% endfor %}
+     
+    </tbody>
+  </table>
+{% endblock %}
+
+
+{% block aside %}
+{% endblock %}

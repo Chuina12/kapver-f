@@ -1,0 +1,1140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-08 18:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: kapver_app/templates/admin/bilden.html:9
+#: kapver_app/templates/admin/dokumente.html:9
+#: kapver_app/templates/admin/ficheapprouver.html:9
+#: kapver_app/templates/admin/mescollaborations.html:11
+msgid "Retour"
+msgstr "Rückkehr"
+
+#: kapver_app/templates/admin/bilden.html:18
+#: kapver_app/templates/admin/dashboard.html:381
+#: kapver_app/templates/admin/ficheapprouver.html:18
+msgid "bilden"
+msgstr ""
+
+#: kapver_app/templates/admin/bilden.html:19
+#: kapver_app/templates/admin/ficheapprouver.html:19
+msgid "Datum"
+msgstr ""
+
+#: kapver_app/templates/admin/bilden.html:20
+#: kapver_app/templates/admin/ficheapprouver.html:20
+#, fuzzy
+#| msgid "Action 1"
+msgid "Aktion"
+msgstr "Aktion 1"
+
+#: kapver_app/templates/admin/candidat.html:12
+#: kapver_app/templates/admin/candidature_user.html:11
+#: kapver_app/templates/admin/detailcandidat.html:18
+#: kapver_app/templates/admin/detailscandidature_user.html:20
+msgid "nom"
+msgstr "Name"
+
+#: kapver_app/templates/admin/candidat.html:13
+msgid "Poste"
+msgstr "Post"
+
+#: kapver_app/templates/admin/candidat.html:14
+#: kapver_app/templates/admin/candidature_user.html:13
+#: kapver_app/templates/admin/recruteur.html:13
+msgid "voir"
+msgstr "sehen"
+
+#: kapver_app/templates/admin/candidat.html:15
+#: kapver_app/templates/admin/candidature_user.html:14
+#: kapver_app/templates/admin/mescollaborations.html:23
+#: kapver_app/templates/admin/recruteur.html:14
+msgid "Action 1"
+msgstr "Aktion 1"
+
+#: kapver_app/templates/admin/candidat.html:16
+#: kapver_app/templates/admin/candidature_user.html:15
+#: kapver_app/templates/admin/recruteur.html:15
+msgid "Action 2"
+msgstr "Aktion 2"
+
+#: kapver_app/templates/admin/candidat.html:24
+#, python-format
+msgid "This is %(item.nom)s"
+msgstr "dies ist %(item.nom)s"
+
+#: kapver_app/templates/admin/candidat.html:25
+#: kapver_app/templates/admin/candidature_user.html:24
+#, python-format
+msgid "%(item.offre)s"
+msgstr ""
+
+#: kapver_app/templates/admin/candidat.html:27
+#: kapver_app/templates/admin/candidature_user.html:26
+msgid "Supprimer"
+msgstr "löschen"
+
+#: kapver_app/templates/admin/candidat.html:28
+#: kapver_app/templates/admin/candidature_user.html:27
+msgid "Lu"
+msgstr "lasen"
+
+#: kapver_app/templates/admin/candidature_user.html:12
+#, fuzzy
+#| msgid "Intitulé"
+msgid "Intitue"
+msgstr "Titel"
+
+#: kapver_app/templates/admin/candidature_user.html:23
+#, python-format
+msgid "%(item.nom)s"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:38
+msgid "Retour !"
+msgstr "zurück sein!"
+
+#: kapver_app/templates/admin/changesalaire.html:54
+msgid "Vom Mitarbeiters auszufûllen und vom kunden bestaetigen lassen."
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:58
+msgid "pos"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:59
+msgid "BZ"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:60
+msgid "Einheit"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:62
+msgid "Menge"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:63
+msgid "Einzelpreis"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:74
+#, python-format
+msgid "%(obj.bz)s "
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:75
+#, python-format
+msgid "%(obj.einheit)s "
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:76
+#, python-format
+msgid "%(obj.menge)s "
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:78
+#, python-format
+msgid "%(obj.einzelpreis)s "
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:107
+#: kapver_app/templates/admin/dashboard.html:888
+#: kapver_app/templates/admin/facture.html:101
+#: kapver_app/templates/admin/fiche_employer.html:156
+msgid "Fiche presence"
+msgstr "Merkblatt Präsenz"
+
+#: kapver_app/templates/admin/changesalaire.html:120
+msgid "bz"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:126
+msgid "einheit"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:135
+msgid "menge"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:154
+msgid "einzelpreis"
+msgstr ""
+
+#: kapver_app/templates/admin/changesalaire.html:162
+#: kapver_app/templates/admin/facture.html:157
+#: kapver_app/templates/admin/facturier.html:198
+#: kapver_app/templates/admin/fiche_employer.html:212
+#: kapver_app/templates/admin/mescollaborations.html:105
+msgid "Enregistrer"
+msgstr "speichern"
+
+#: kapver_app/templates/admin/dashboard.html:276
+msgid "Deconnexion"
+msgstr "Entfesseln"
+
+#: kapver_app/templates/admin/dashboard.html:293
+#, python-format
+msgid "%(i)s "
+msgstr ""
+
+#: kapver_app/templates/admin/dashboard.html:301
+#: kapver_app/templates/admin/dashboard.html:434
+#: kapver_app/templates/admin/dashboard.html:597
+#: kapver_app/templates/admin/dashboard.html:761
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: kapver_app/templates/admin/dashboard.html:311
+#: kapver_app/templates/admin/dashboard.html:604
+#: kapver_app/templates/index.html:65 kapver_app/templates/index.html:521
+#: kapver_app/templates/pages/details.html:40
+msgid "Candidature"
+msgstr "Kandidatur"
+
+#: kapver_app/templates/admin/dashboard.html:316
+#: kapver_app/templates/admin/dashboard.html:609
+msgid "Candidats offre"
+msgstr "Kandidaten bietet"
+
+#: kapver_app/templates/admin/dashboard.html:321
+#: kapver_app/templates/admin/dashboard.html:614
+msgid "Recruteurs"
+msgstr "Recruiter"
+
+#: kapver_app/templates/admin/dashboard.html:326
+#: kapver_app/templates/admin/dashboard.html:619
+msgid "Infos candidat"
+msgstr "Infos Kandidat"
+
+#: kapver_app/templates/admin/dashboard.html:335
+#: kapver_app/templates/admin/dashboard.html:630
+msgid "Entreprises"
+msgstr "Unternehmen"
+
+#: kapver_app/templates/admin/dashboard.html:342
+#, python-format
+msgid "%(i.nom_entreprise)s"
+msgstr ""
+
+#: kapver_app/templates/admin/dashboard.html:353
+msgid "Employers"
+msgstr "Employers"
+
+#: kapver_app/templates/admin/dashboard.html:360
+#, python-format
+msgid "%(em.nom)s"
+msgstr ""
+
+#: kapver_app/templates/admin/dashboard.html:370
+#: kapver_app/templates/admin/dashboard.html:662
+msgid "Documents"
+msgstr "Dokumente"
+
+#: kapver_app/templates/admin/dashboard.html:375
+#: kapver_app/templates/admin/dashboard.html:667
+msgid "Factures"
+msgstr "Rechnungen"
+
+#: kapver_app/templates/admin/dashboard.html:388
+msgid "genehmigtes Blatt"
+msgstr ""
+
+#: kapver_app/templates/admin/dashboard.html:395
+msgid "meine Dokumente"
+msgstr ""
+
+#: kapver_app/templates/admin/dashboard.html:407
+#: kapver_app/templates/admin/dashboard.html:412
+msgid "Collaborateurs"
+msgstr "Mitarbeiter"
+
+#: kapver_app/templates/admin/dashboard.html:505
+msgid "creer signature"
+msgstr "erstellen"
+
+#: kapver_app/templates/admin/dashboard.html:511
+msgid "fiche presence"
+msgstr "Karte Präsenz"
+
+#: kapver_app/templates/admin/dashboard.html:637
+#, python-format
+msgid "%(i.nom_entreprise)s "
+msgstr ""
+
+#: kapver_app/templates/admin/dashboard.html:648
+#: kapver_app/templates/index.html:69
+msgid "Offres"
+msgstr "Angebote"
+
+#: kapver_app/templates/admin/dashboard.html:828
+msgid "Total Fiche "
+msgstr "Total Fiche"
+
+#: kapver_app/templates/admin/dashboard.html:833
+#, python-format
+msgid "%(number_candidature)s "
+msgstr ""
+
+#: kapver_app/templates/admin/dashboard.html:866
+#, fuzzy
+#| msgid "Fiche non signé"
+msgid "Fiche non signer"
+msgstr "Formular nicht unterzeichnet"
+
+#: kapver_app/templates/admin/dashboard.html:902
+msgid "Ma signature"
+msgstr "meine Unterschrift"
+
+#: kapver_app/templates/admin/dashboard.html:958
+#: kapver_app/templates/admin/dashboard.html:975
+msgid "Employes"
+msgstr "Employes"
+
+#: kapver_app/templates/admin/detail_employer.html:12
+#: kapver_app/templates/admin/facture.html:146
+#: kapver_app/templates/admin/fiche_employer.html:198
+#: kapver_app/templates/admin/recruteur.html:11
+msgid "entreprise"
+msgstr "Unternehmen"
+
+#: kapver_app/templates/admin/detail_employer.html:13
+msgid "employer"
+msgstr "verwenden"
+
+#: kapver_app/templates/admin/detail_employer.html:14
+#: kapver_app/templates/admin/mescollaborations.html:22
+msgid "date"
+msgstr "Datum"
+
+#: kapver_app/templates/admin/detail_employer.html:15
+msgid "Voir"
+msgstr "sehen"
+
+#: kapver_app/templates/admin/detail_employer.html:28
+#, python-format
+msgid "%(obj.date)s"
+msgstr ""
+
+#: kapver_app/templates/admin/detail_entreprise.html:11
+msgid "Gerant"
+msgstr "Geschäftsführer"
+
+#: kapver_app/templates/admin/detail_entreprise.html:12
+#: kapver_app/templates/admin/detailentreprise.html:30
+msgid "Entreprise"
+msgstr "Unternehmen"
+
+#: kapver_app/templates/admin/detail_entreprise.html:13
+#: kapver_app/templates/admin/mescollaborations.html:82
+msgid "email"
+msgstr "E-Mail"
+
+#: kapver_app/templates/admin/detail_entreprise.html:14
+#: kapver_app/templates/admin/detailentreprise.html:20
+msgid "Adresse"
+msgstr "Adresse"
+
+#: kapver_app/templates/admin/detail_entreprise.html:15
+msgid "Total Travailleur"
+msgstr "Insgesamt Arbeiter"
+
+#: kapver_app/templates/admin/detailcandidat.html:9
+#: kapver_app/templates/index.html:522
+msgid "offre"
+msgstr "bietet"
+
+#: kapver_app/templates/admin/detailcandidat.html:26
+#: kapver_app/templates/admin/detailentreprise.html:47
+#: kapver_app/templates/admin/detailscandidature_user.html:28
+msgid "message"
+msgstr "Nachricht"
+
+#: kapver_app/templates/admin/detailcandidat.html:38
+#: kapver_app/templates/admin/detailscandidature_user.html:40
+msgid "voir son cv"
+msgstr "siehe seinen Lebenslauf"
+
+#: kapver_app/templates/admin/detailentreprise.html:11
+#: kapver_app/templates/admin/recruteur.html:12
+msgid "domain"
+msgstr "Bereich"
+
+#: kapver_app/templates/admin/detailentreprise.html:38
+msgid "Numero"
+msgstr "Numero"
+
+#: kapver_app/templates/admin/detailscandidature_user.html:11
+#, fuzzy
+#| msgid "Intitulé du candidat"
+msgid "Intitule candidat"
+msgstr "Titel des Bewerbers"
+
+#: kapver_app/templates/admin/dokumente.html:19
+#, fuzzy
+#| msgid "Documents"
+msgid "dokumente"
+msgstr "Dokumente"
+
+#: kapver_app/templates/admin/dokumente.html:20
+msgid "datum"
+msgstr ""
+
+#: kapver_app/templates/admin/email.html:29
+msgid "Espace Mail"
+msgstr "Webspace E-Mail-Adressen"
+
+#: kapver_app/templates/admin/email.html:30
+#: kapver_app/templates/admin/sendfacture.html:30
+#: kapver_app/templates/admin/sendfiche.html:30
+msgid "Accueil"
+msgstr "Home"
+
+#: kapver_app/templates/admin/email.html:35
+#: kapver_app/templates/admin/sendfacture.html:35
+#: kapver_app/templates/admin/sendfiche.html:35
+#: kapver_app/templates/pages/candidature.html:20
+#, python-format
+msgid "%(message)s"
+msgstr ""
+
+#: kapver_app/templates/admin/facture.html:143
+msgid "Employer"
+msgstr "verwenden"
+
+#: kapver_app/templates/admin/facture.html:156
+#: kapver_app/templates/admin/facturier.html:197
+#: kapver_app/templates/admin/mescollaborations.html:104
+#: kapver_app/templates/admin/signature.html:40
+#: kapver_app/templates/pages/details.html:69
+msgid "Fermer"
+msgstr "schließen"
+
+#: kapver_app/templates/admin/fiche_employer.html:42
+msgid "soumettre ma fiche"
+msgstr "mein Formular einreichen"
+
+#: kapver_app/templates/admin/fiche_employer.html:63
+msgid "Document Salaire"
+msgstr "Dokument Lohn"
+
+#: kapver_app/templates/admin/mescollaborations.html:8
+msgid "Ajouter un collaborateur"
+msgstr "Einen Mitarbeiter hinzufügen"
+
+#: kapver_app/templates/admin/mescollaborations.html:20
+msgid "Nom"
+msgstr "Name"
+
+#: kapver_app/templates/admin/mescollaborations.html:21
+msgid "Email"
+msgstr "E-Mail"
+
+#: kapver_app/templates/admin/mescollaborations.html:72
+msgid "collaborateur"
+msgstr "Mitarbeiter"
+
+#: kapver_app/templates/admin/mescollaborations.html:79
+msgid "Nom collaborateur"
+msgstr "Name des Mitarbeiters"
+
+#: kapver_app/templates/admin/mescollaborations.html:90
+msgid "adresse"
+msgstr "Adresse"
+
+#: kapver_app/templates/admin/mescollaborations.html:93
+msgid "Code de pays :"
+msgstr "Ländercode"
+
+#: kapver_app/templates/admin/mescollaborations.html:98
+msgid "numero tel"
+msgstr "TELEFONNUMMER"
+
+#: kapver_app/templates/admin/mytamplateemail.html:19
+msgid ""
+"Kapver, ein deutsches Unternehmen, ist darauf spezialisiert, Arbeitssuchende "
+"mit spezifischen Geschäftsanforderungen zu verbinden. Sie rekrutiert "
+"Fachkräfte aus der ganzen Welt, um sie deutschen Unternehmen zur Verfügung "
+"zu stellen. Kurz gesagt, Kapver erleichtert die internationale Rekrutierung, "
+"indem es berufliche Möglichkeiten zwischen Arbeitssuchenden und deutschen "
+"Unternehmen fördert.</br> "
+msgstr ""
+
+#: kapver_app/templates/admin/sendfacture.html:29
+#: kapver_app/templates/admin/sendfiche.html:29
+msgid "die Rechnung verschicken"
+msgstr ""
+
+#: kapver_app/templates/admin/sig.html:8
+msgid "Draw & Download Signature"
+msgstr "zeichnen & herunterladen Signatur"
+
+#: kapver_app/templates/admin/sig.html:28
+#: kapver_app/templates/admin/signature.html:29
+#, fuzzy
+#| msgid "Créer ma signature"
+msgid "Creer ma signature"
+msgstr "Meine Unterschrift erstellen"
+
+#: kapver_app/templates/admin/sig.html:34
+#: kapver_app/templates/admin/signature.html:35
+msgid "ma signature"
+msgstr "meine Unterschrift"
+
+#: kapver_app/templates/admin/sig.html:40
+msgid "Importer"
+msgstr "importieren"
+
+#: kapver_app/templates/admin/sig.html:52
+#: kapver_app/templates/admin/signature.html:53
+msgid "Importer ma signature"
+msgstr "Meine Signatur importieren"
+
+#: kapver_app/templates/admin/sig.html:57
+#: kapver_app/templates/admin/signature.html:58
+msgid "Download"
+msgstr "herunterladen"
+
+#: kapver_app/templates/admin/signature.html:51
+msgid "Preview"
+msgstr "Vorschau"
+
+#: kapver_app/templates/index.html:64 kapver_app/templates/index.html:520
+msgid "Employeur"
+msgstr "Arbeitgeber"
+
+#: kapver_app/templates/index.html:67
+msgid "Recrutement"
+msgstr "Einstellung"
+
+#: kapver_app/templates/index.html:72
+msgid "Conditions"
+msgstr "Bedingungen"
+
+#: kapver_app/templates/index.html:77
+msgid "Contact"
+msgstr "Kontakt"
+
+#: kapver_app/templates/index.html:78
+#, fuzzy
+#| msgid "Deconnexion"
+msgid "connexion"
+msgstr "Entfesseln"
+
+#: kapver_app/templates/index.html:106
+msgid "Postuler maintenant"
+msgstr "Jetzt bewerben"
+
+#: kapver_app/templates/index.html:117
+msgid "Faire une offre maintenant"
+msgstr "Jetzt ein Angebot machen"
+
+#: kapver_app/templates/index.html:137
+msgid "en savoir plus"
+msgstr "erfahren Sie mehr"
+
+#: kapver_app/templates/index.html:158
+msgid "Placement Permanent"
+msgstr "Vermittlung von festangestellten"
+
+#: kapver_app/templates/index.html:159
+msgid ""
+"Tous nos placements permanents sont accompagnés d’une garantie de "
+"remplacement afin d’assurer la qualité du service qui vous est offert."
+msgstr ""
+"Alle unsere Daueranlagen sind mit einer Garantie von Ersatz, um die Qualität "
+"der Ihnen angebotenen Dienstleistung zu gewährleisten."
+
+#: kapver_app/templates/index.html:167
+msgid "Placement Temporaire"
+msgstr "vorübergehende Unterbringung"
+
+#: kapver_app/templates/index.html:168
+msgid ""
+"Avez-vous un besoin de personnel pour surmonter une hausse de travail "
+"momentanée, ou pour travailler sur un nouveau projet, ou encore pour "
+"remplacer des salariés en congés ou en absence?"
+msgstr ""
+"Benötigen Sie Personal, um einen momentanen Anstieg der Arbeit zu "
+"überwinden, an einem neuen Projekt zu arbeiten oder Mitarbeiter in Urlaub "
+"oder Abwesenheit zu ersetzen?"
+
+#: kapver_app/templates/index.html:176
+msgid "International"
+msgstr "international"
+
+#: kapver_app/templates/index.html:177
+msgid ""
+"Kapver vous offrira tout le support nécessaire pour vous accompagner dans "
+"l’ensemble des étapes clés du processus de recrutement à l’international."
+msgstr ""
+"Kapver bietet Ihnen die notwendige Unterstützung, um Sie in allen wichtigen "
+"Phasen des internationalen Rekrutierungsprozesses zu unterstützen."
+
+#: kapver_app/templates/index.html:185
+msgid "Book Library"
+msgstr "Bibliothek"
+
+#: kapver_app/templates/index.html:186
+msgid ""
+"Kapver peut s’occuper de tous vos processus en recrutement à même votre "
+"établissement afin de répondre au besoin de volume ou de spécialité "
+"technique de vos mains de d’œuvre."
+msgstr ""
+"Kapver kann alle Ihre Rekrutierungsprozesse direkt in Ihrer Einrichtung "
+"durchführen, um den Bedarf Ihrer Belegschaft an Volumen oder technischer "
+"Spezialisierung zu decken."
+
+#: kapver_app/templates/index.html:207
+#, fuzzy
+#| msgid "à propos"
+msgid " à propos"
+msgstr "wegen"
+
+#: kapver_app/templates/index.html:208
+#, fuzzy
+#| msgid "Bienvenue à "
+msgid "Bienvenue à "
+msgstr "Willkommen bei "
+
+#: kapver_app/templates/index.html:238
+msgid "Votre Choix"
+msgstr "Ihrer Wahl"
+
+#: kapver_app/templates/index.html:244
+msgid "EMPLOYEURS"
+msgstr "Arbeitgeber"
+
+#: kapver_app/templates/index.html:247
+msgid ""
+"KapVer a pour objectif de répondre rapidement et efficacement aux besoins "
+"des employeurs dans leur recherche de travailleurs qualifiés."
+msgstr ""
+"KapVer zielt darauf ab, schnell und effektiv auf die Bedürfnisse der "
+"Arbeitgeber bei der Suche nach Facharbeitern zu reagieren."
+
+#: kapver_app/templates/index.html:248
+msgid "Trouver des candidats"
+msgstr "geeignete Kandidaten zu finden"
+
+#: kapver_app/templates/index.html:256
+msgid "CANDIDATS"
+msgstr "Kandidaten"
+
+#: kapver_app/templates/index.html:259
+msgid ""
+"KapVer a pour objectif de vous offrir une large sélection de poste afin "
+"d’intégrer des entreprises intéressantes et répondants à vos critères de "
+"choix.."
+msgstr ""
+"KapVer möchte Ihnen eine große Auswahl an Stellen bieten, um interessante "
+"Unternehmen zu integrieren, die Ihre Auswahlkriterien erfüllen..."
+
+#: kapver_app/templates/index.html:260
+msgid "Trouver des employeurs"
+msgstr "Arbeitgeber finden"
+
+#: kapver_app/templates/index.html:277
+msgid "Nous réalisons le parfait jumelage entre vous et le candidat idéal."
+msgstr ""
+"Wir machen die perfekte Paarung zwischen Ihnen und dem idealen Kandidaten."
+
+#: kapver_app/templates/index.html:282
+msgid ""
+"En nous confiant la gestion de la recherche de vos employés ou de votre main "
+"d'œuvre, vous bénéficierez de nos compétences et de notre expertise afin de "
+"trouver des candidats hautement qualifiés et motivés, correspondant "
+"parfaitement à vos besoins spécifiques. nous nous occuperons de toutes les "
+"étapes du processus de recrutement, de la rédaction des offres d'emploi à la "
+"présélection des candidatures, en passant par les entretiens et les "
+"vérifications des références. Vous fournirons ensuite une sélection "
+"restreinte de candidats prêts à être présentés pour des entretiens finaux."
+msgstr ""
+"Wenn Sie uns mit der Verwaltung der Suche Ihrer Mitarbeiter oder Ihrer "
+"Mitarbeiter beauftragen, profitieren Sie von unserer Kompetenz und "
+"Expertise, um hochqualifizierte und motivierte Kandidaten zu finden, die "
+"Ihren spezifischen Bedürfnissen entsprechen. Wir kümmern uns um alle Phasen "
+"des Einstellungsprozesses, von der Erstellung von Stellenangeboten über die "
+"Vorauswahl von Bewerbungen bis hin zu Interviews und Referenzprüfungen. Sie "
+"werden dann eine begrenzte Auswahl von Kandidaten zur Verfügung stellen, die "
+"für Abschlussinterviews bereit sind."
+
+#: kapver_app/templates/index.html:287
+msgid "Commencer maintenant ! >"
+msgstr "Starten Sie jetzt!"
+
+#: kapver_app/templates/index.html:297
+#, fuzzy
+msgid "Offres d'emplois"
+msgstr "Einige Stellenangebote"
+
+#: kapver_app/templates/index.html:318
+#: kapver_app/templates/pages/offres.html:46
+#, fuzzy
+#| msgid "Postuler maintenant"
+msgid "Postuler Maintenant"
+msgstr "Jetzt bewerben"
+
+#: kapver_app/templates/index.html:433
+msgid "Avez-vous besoin du personnel qualifer ?"
+msgstr "Benötigen Sie das qualifer Personal?"
+
+#: kapver_app/templates/index.html:435
+msgid ""
+"Kapver excelle dans la création de synergies professionnelles en connectant "
+"des talents qualifiés avec les besoins spécifiques des entreprises. Grâce à "
+"son expertise, Kapver orchestre des collaborations fructueuses en offrant un "
+"service qui va au-delà du simple recrutement. L'entreprise façonne des "
+"opportunités sur mesure, catalysant ainsi la croissance des entreprises tout "
+"en propulsant les carrières des professionnels vers de nouveaux sommets. En "
+"résumé, Kapver se positionne comme le catalyseur de succès, révolutionnant "
+"la manière dont les compétences exceptionnelles sont mises en valeur et "
+"exploitées dans le monde professionnel."
+msgstr ""
+"Kapver zeichnet sich durch die Schaffung professioneller Synergien aus, "
+"indem qualifizierte Talente mit den spezifischen Bedürfnissen von "
+"Unternehmen verbunden werden. Dank seiner Expertise arbeitet Kapver "
+"erfolgreich zusammen und bietet einen Service, der über die reine "
+"Rekrutierung hinausgeht. Das Unternehmen schafft maßgeschneiderte Chancen "
+"und treibt das Wachstum von Unternehmen voran, während es die Karrieren von "
+"Profis auf neue Höhen bringt. Kurz gesagt, Kapver positioniert sich als "
+"Katalysator für den Erfolg und revolutioniert die Art und Weise, wie "
+"herausragende Fähigkeiten in der Arbeitswelt gefördert und genutzt werden."
+
+#: kapver_app/templates/index.html:451
+msgid "Vous recherchez un emploi ?"
+msgstr "Sie suchen einen Job?"
+
+#: kapver_app/templates/index.html:453
+msgid ""
+"Kapver, entreprise allemande de renom, se distingue par son engagement à "
+"recruter à l'échelle mondiale. En tant que catalyseur de carrière, Kapver "
+"joue un rôle crucial en mettant en relation des chercheurs d'emploi "
+"talentueux avec des opportunités professionnelles au sein d'entreprises "
+"prestigieuses."
+msgstr ""
+"Das renommierte deutsche Unternehmen Kapver zeichnet sich durch sein "
+"Engagement für die weltweite Rekrutierung aus. Als Karrierekatalysator "
+"spielt Kapver eine entscheidende Rolle, wenn es darum geht, talentierte "
+"Arbeitssuchende mit beruflichen Möglichkeiten in renommierten Unternehmen zu "
+"verbinden."
+
+#: kapver_app/templates/index.html:453
+msgid ""
+"Grâce à son réseau mondial, Kapver assure aux individus ambitieux la "
+"possibilité d'être recrutés par des employeurs recherchant des talents "
+"exceptionnels. L'entreprise s'engage à faciliter des rencontres "
+"professionnelles fructueuses, propulsant ainsi les carrières vers de "
+"nouveaux horizons et offrant aux entreprises des ressources humaines de "
+"premier ordre. En résumé, Kapver offre un pont vers le succès mondial en "
+"connectant de manière efficace chercheurs d'emploi et employeurs à travers "
+"le globe."
+msgstr ""
+"Dank seines globalen Netzwerks bietet Kapver ambitionierten Menschen die "
+"Möglichkeit, von Arbeitgebern rekrutiert zu werden, die außergewöhnliche "
+"Talente suchen. Das Unternehmen ist bestrebt, erfolgreiche Geschäftstreffen "
+"zu erleichtern, Karrieren in neue Horizonte zu treiben und Unternehmen "
+"erstklassige Humanressourcen zu bieten. Kurzum, Kapver bietet eine Brücke "
+"zum globalen Erfolg, indem es Arbeitssuchende und Arbeitgeber weltweit "
+"effizient vernetzt."
+
+#: kapver_app/templates/index.html:471 kapver_app/templates/index.html:472
+msgid "Temoignages"
+msgstr "Aussagen"
+
+#: kapver_app/templates/index.html:478
+#, fuzzy
+#| msgid "Sécretaire de direction"
+msgid "Secretaire de direction"
+msgstr "Sekretär der Direktion"
+
+#: kapver_app/templates/index.html:480
+msgid ""
+"Pendant les semaines suivantes, j'ai été contactée régulièrement et on m'a "
+"proposé plusieurs postes qui correspondaient à mon profil et à mes attentes."
+msgstr ""
+"In den folgenden Wochen wurde ich regelmäßig kontaktiert und mir wurden "
+"mehrere Stellen angeboten, die meinem Profil und meinen Erwartungen "
+"entsprachen."
+
+#: kapver_app/templates/index.html:488
+msgid ""
+"Mon expérience avec Kapver a été un véritable tournant dans ma carrière de "
+"développeur. Après avoir traversé une période de chômage, C'est alors que "
+"j'ai découvert Kapver. Et pendant les semaines qui ont suivi ma decouverte "
+"ils m'ont proposés des postes qui correspondaient à mon profil de "
+"developpeur et à mes attentes"
+msgstr ""
+"Meine Erfahrung mit Kapver war ein Wendepunkt in meiner Karriere als "
+"Entwickler. Nachdem ich eine Zeit der Arbeitslosigkeit hinter mir hatte, "
+"entdeckte ich Kapver. Und in den Wochen nach meiner Entdeckung boten sie mir "
+"Stellen an, die meinem Entwicklungsprofil und meinen Erwartungen entsprachen"
+
+#: kapver_app/templates/index.html:496
+msgid ""
+"En tant que recruteur pour une entreprise en plein essor, j'ai été confronté "
+"à un défi de taille : trouver des candidats qualifiés pour pourvoir nos "
+"postes vacants dans un délai serré. C'est à ce moment-là que nous avons eu "
+"la chance de collaborer avec Kapver, Grâce à leur vaste réseau ils ont pu "
+"rapidement nous trouvés des candidats qualifiés pour nos postes vacants"
+msgstr ""
+"Als Personalvermittler für ein aufstrebendes Unternehmen stand ich vor der "
+"großen Herausforderung, qualifizierte Kandidaten zu finden, um unsere "
+"offenen Stellen innerhalb eines engen Zeitrahmens zu besetzen. Zu dieser "
+"Zeit hatten wir das Glück, mit Kapver zusammenzuarbeiten. Dank ihres großen "
+"Netzwerks konnten sie schnell qualifizierte Kandidaten für unsere offenen "
+"Stellen finden"
+
+#: kapver_app/templates/index.html:502
+msgid "Institutrice"
+msgstr "Lehrer"
+
+#: kapver_app/templates/index.html:504
+msgid ""
+"Mon parcours en tant qu'institutrice a connu des hauts et des bas, mais rien "
+"ne m'avait préparée à la période de chômage que j'ai traversée il y a "
+"quelques mois. C'est à ce moment-là que j'ai découvert Kapver. Grâce à "
+"Kapver, j'ai pu décrocher un poste dans une école qui correspondait "
+"parfaitement à mes valeurs éducatives et à ma philosophie pédagogique."
+msgstr ""
+"Meine Laufbahn als Lehrerin hatte Höhen und Tiefen, aber nichts bereitete "
+"mich auf die Zeit der Arbeitslosigkeit vor ein paar Monaten vor. In diesem "
+"Moment entdeckte ich Kapver. Dank Kapver konnte ich eine Stelle an einer "
+"Schule finden, die perfekt zu meinen erzieherischen Werten und meiner "
+"pädagogischen Philosophie passte."
+
+#: kapver_app/templates/index.html:519
+msgid "Lien rapide"
+msgstr "schnelle Verbindung"
+
+#: kapver_app/templates/index.html:523
+msgid "Condition"
+msgstr "Voraussetzung"
+
+#: kapver_app/templates/index.html:542
+#, fuzzy
+#| msgid "Notre QR code"
+msgid "Notre Qrcode"
+msgstr "Unser QR Code"
+
+#: kapver_app/templates/index.html:553
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: kapver_app/templates/index.html:554
+msgid "Souscrire a notre NewsLetter"
+msgstr "Abonnieren Sie unseren NewsLetter"
+
+#: kapver_app/templates/index.html:574
+msgid "Home"
+msgstr "Haus"
+
+#: kapver_app/templates/index.html:575
+msgid "Cookies"
+msgstr "Cookie-Einstellungen"
+
+#: kapver_app/templates/index.html:576
+msgid "Help"
+msgstr "helfen"
+
+#: kapver_app/templates/index.html:577
+msgid "FQAs"
+msgstr "FQAs"
+
+#: kapver_app/templates/pages/candidature.html:16
+msgid "Espace Candidature"
+msgstr "Espace Candidate"
+
+#: kapver_app/templates/pages/candidature.html:17
+msgid ""
+"Une fois votre candidature soumise chez Kapver, vous pouvez être rassuré(e) "
+"que notre équipe experte s'engagera pleinement à trouver pour vous le "
+"meilleur emploi disponible. Avec notre vaste réseau d'entreprises et de "
+"recruteurs, nous mettrons tout en œuvre pour vous offrir des opportunités "
+"professionnelles qui correspondent à vos qualifications et aspirations."
+msgstr ""
+"Sobald Sie Ihre Bewerbung bei Kapver eingereicht haben, können Sie sich "
+"sicher sein, dass unser Expertenteam sich voll und ganz dafür einsetzen "
+"wird, für Sie die beste verfügbare Stelle zu finden(n). Mit unserem "
+"umfangreichen Netzwerk von Unternehmen und Personalvermittlern werden wir "
+"alles tun, um Ihnen Karrieremöglichkeiten zu bieten, die Ihren "
+"Qualifikationen und Ambitionen entsprechen."
+
+#: kapver_app/templates/pages/candidature.html:23
+#, fuzzy
+#| msgid "Intitulé"
+msgid "Intitule:"
+msgstr "Titel"
+
+#: kapver_app/templates/pages/candidature.html:25
+msgid "Monsieur:"
+msgstr "Herr:"
+
+#: kapver_app/templates/pages/candidature.html:26
+msgid "Madame:"
+msgstr "Frau:"
+
+#: kapver_app/templates/pages/candidature.html:30
+msgid "nom:"
+msgstr "Name:"
+
+#: kapver_app/templates/pages/candidature.html:38
+msgid "Message de motivation"
+msgstr "Motivationsbotschaft"
+
+#: kapver_app/templates/pages/candidature.html:46
+msgid "votre CV:"
+msgstr "Ihren Lebenslauf"
+
+#: kapver_app/templates/pages/conditions.html:11
+msgid ""
+"Kapver, entreprise allemande, se spécialise dans la mise en relation de "
+"chercheurs d'emploi avec les besoins spécifiques des entreprises. Cette "
+"société recrute des talents du monde entier pour les mettre au service "
+"d'entreprises basées en Allemagne. Pour ceux désirant immigrer en Allemagne "
+"pour un contrat de travail, il est nécessaire de démontrer un niveau de "
+"langue B2 et de présenter les diplômes requis en fonction des besoins "
+"spécifiques de l'entreprise. En somme, Kapver facilite le recrutement "
+"international en favorisant des opportunités professionnelles entre les "
+"chercheurs d'emploi et les entreprises allemandes."
+msgstr ""
+"Kapver ist ein deutsches Unternehmen, das sich auf die Vermittlung von "
+"Arbeitssuchenden an die spezifischen Bedürfnisse der Unternehmen "
+"spezialisiert hat. Das Unternehmen rekrutiert Talente aus der ganzen Welt "
+"für Unternehmen in Deutschland. Für diejenigen, die für einen Arbeitsvertrag "
+"nach Deutschland einwandern möchten, ist es notwendig, ein Sprachniveau B2 "
+"nachzuweisen und die erforderlichen Diplome entsprechend den spezifischen "
+"Bedürfnissen des Unternehmens vorzulegen. Insgesamt erleichtert Kapver die "
+"internationale Rekrutierung durch die Förderung von Karrierechancen zwischen "
+"Arbeitssuchenden und deutschen Unternehmen."
+
+#: kapver_app/templates/pages/contact.html:14
+msgid "Contactez nous !"
+msgstr "Kontaktiere uns!"
+
+#: kapver_app/templates/pages/contact.html:18
+#: kapver_app/templates/pages/contact.html:25
+msgid "Situation"
+msgstr "Situation"
+
+#: kapver_app/templates/pages/contact.html:19
+msgid ""
+"L'entreprise allemande Kapver est située à l'adresse suivante : "
+"Eichenstrasse 5, 47665 Sonsbeck."
+msgstr ""
+"Das deutsche Unternehmen Kapver hat seinen Sitz unter folgender Adresse: "
+"Eichenstrasse 5, 47665 Sonsbeck."
+
+#: kapver_app/templates/pages/contact.html:26
+msgid "Eichenstrasse 5, 47665 Sonsbeck."
+msgstr ""
+"Das deutsche Unternehmen Kapver hat folgenden Sitz: Eichenstrasse 5, 47665 "
+"Sonsbeck."
+
+#: kapver_app/templates/pages/contact.html:34
+msgid "Phone"
+msgstr "Telefon"
+
+#: kapver_app/templates/pages/contact.html:61
+msgid "Your Name"
+msgstr "Ihren Namen"
+
+#: kapver_app/templates/pages/contact.html:67
+msgid "Your Email"
+msgstr "Ihre E-Mail"
+
+#: kapver_app/templates/pages/contact.html:73
+msgid "Subject"
+msgstr "Thema"
+
+#: kapver_app/templates/pages/contact.html:79
+msgid "Message"
+msgstr "Nachricht"
+
+#: kapver_app/templates/pages/contact.html:83
+msgid "Send Message"
+msgstr "Nachricht senden"
+
+#: kapver_app/templates/pages/details.html:21
+msgid "recherche un candidat pour un poste situé à"
+msgstr "sucht eine/n Bewerber/in für eine Stelle in"
+
+#: kapver_app/templates/pages/details.html:21
+msgid "Le poste nécessite un engagement de"
+msgstr "Die Stelle erfordert ein Engagement von"
+
+#: kapver_app/templates/pages/details.html:21
+msgid "heures par semaine"
+msgstr "Stunden pro Woche"
+
+#: kapver_app/templates/pages/details.html:30
+msgid "Postuler a cette offre"
+msgstr "Bewerben Sie sich auf dieses Angebot"
+
+#: kapver_app/templates/pages/details.html:50
+msgid "Nom:"
+msgstr "Name:"
+
+#: kapver_app/templates/pages/details.html:55
+msgid "votre message"
+msgstr "Ihre Nachricht"
+
+#: kapver_app/templates/pages/details.html:62
+msgid "votre Cv"
+msgstr "Ihren Lebenslauf"
+
+#: kapver_app/templates/pages/details.html:70
+msgid "Postuler"
+msgstr "bewerben"
+
+#: kapver_app/templates/pages/employeur.html:12
+#: kapver_app/templates/pages/employeur.html:28
+msgid "Besoin de main d'oeuvres ?"
+msgstr "Brauchen Sie ein paar Kunstwerke?"
+
+#: kapver_app/templates/pages/employeur.html:32
+msgid "Vous aviez besoin de main d'oeuvre qualifier ?"
+msgstr "Sie brauchten qualifizierte Arbeitskräfte?"
+
+#: kapver_app/templates/pages/employeur.html:40
+msgid ""
+"nous vous remercions sincèrement de prendre le temps de considérer cette "
+"proposition tout en espèrant avoir l'occasion de vous aider à trouver les "
+"meilleurs talents pour votre entreprise en remplicant le formulaire suivant."
+msgstr ""
+"Vielen Dank, dass Sie sich die Zeit nehmen, diesen Vorschlag zu prüfen, und "
+"hoffen, dass Sie die Möglichkeit haben, die besten Talente für Ihr "
+"Unternehmen zu finden, indem Sie das folgende Formular ausfüllen."
+
+#: kapver_app/templates/pages/employeur.html:51
+#, python-format
+msgid " %(message)s "
+msgstr ""
+
+#: kapver_app/templates/pages/employeur.html:59
+msgid "Nom entreprise"
+msgstr "Name Unternehmen"
+
+#: kapver_app/templates/pages/employeur.html:65
+msgid "Numero Tel"
+msgstr "Numero Tel"
+
+#: kapver_app/templates/pages/employeur.html:73
+msgid "domaine d'expertise"
+msgstr "Fachgebiet"
+
+#: kapver_app/templates/pages/employeur.html:79
+#: kapver_app/templates/pages/employeur.html:84
+msgid "Address"
+msgstr "Adresse"
+
+#: kapver_app/templates/pages/employeur.html:100
+msgid "Description du besoin"
+msgstr "Beschreibung des Bedarfs"
+
+#: kapver_app/templates/pages/employeur.html:118
+msgid "Soumettre"
+msgstr "vorlegen"
+
+#: kapver_app/templates/pages/offres.html:25
+#, fuzzy
+msgid "Offres d'emploi"
+msgstr "Einige Stellenangebote"
+
+#: kapver_app/templates/pages/offres.html:65
+msgid ""
+"Si vous n'avez pas trouvé d'offres correspondant à votre profil parmi celles "
+"proposées par Kapver, soyez assuré(e) que vous pouvez toujours déposer une "
+"candidature. Kapver offre également la possibilité de trouver des offres "
+"plus intéressantes en fonction de votre profil"
+msgstr ""
+"Wenn Sie unter den von Kapver angebotenen Stellenangeboten keine "
+"Stellenangebote finden, die zu Ihrem Profil passen, können Sie sich "
+"weiterhin bewerben(n). Kapver bietet auch die Möglichkeit, interessantere "
+"Angebote nach Ihrem Profil zu finden"
+
+#: kapver_app/templates/pages/offres.html:67
+msgid "candidature"
+msgstr "Bewerbung"
+
+#~ msgid "Un recrutement et placement mondialement specialiser"
+#~ msgstr "Weltweit spezialisierte Rekrutierung und Vermittlung"
+
+#~ msgid "Je recherche un emploi"
+#~ msgstr "Ich suche einen Job"
+
+#~ msgid "Je suis recruteur"
+#~ msgstr "Ich bin ein Scout"
+
+#~ msgid "Un service specialiser a dimension humaine"
+#~ msgstr "Ein spezialisierter Service mit menschlicher Dimension"
+
+#~ msgid "Specialiste en recrutement en ressources technique"
+#~ msgstr "Spezialist für Rekrutierung in technischen Ressourcen"
+
+#~ msgid ""
+#~ "Kapver, une entreprise allemande, se spécialise dans la mise en relation "
+#~ "de chercheurs d'emploi avec les besoins spécifiques des entreprises. Elle "
+#~ "procède au recrutement de professionnels du monde entier pour les mettre "
+#~ "à disposition des entreprises allemandes."
+#~ msgstr ""
+#~ "Kapver, ein deutsches Unternehmen, spezialisiert sich auf die Vermittlung "
+#~ "von Arbeitssuchenden an die spezifischen Bedürfnisse der Unternehmen. Sie "
+#~ "rekrutiert Fachkräfte aus aller Welt, um sie deutschen Unternehmen zur "
+#~ "Verfügung zu stellen."
+
+#~ msgid ""
+#~ "En somme, Kapver facilite le recrutement international en favorisant des "
+#~ "opportunités professionnelles entre les chercheurs d'emploi et les "
+#~ "entreprises allemandes."
+#~ msgstr ""
+#~ "Insgesamt erleichtert Kapver die internationale Rekrutierung durch die "
+#~ "Förderung von Karrierechancen zwischen Arbeitssuchenden und deutschen "
+#~ "Unternehmen."
+
+#~ msgid "Satisfaction"
+#~ msgstr "Zufriedenheit"
+
+#, fuzzy
+#~| msgid "Regularite"
+#~ msgid "Securite"
+#~ msgstr "Sicherheit"
+
+#~ msgid "Regularite"
+#~ msgstr "Sicherheit"
+
+#, fuzzy
+#~| msgid "Qualité"
+#~ msgid "Qualite"
+#~ msgstr "Qualität"
+
+#, fuzzy
+#~| msgid "Rapidité"
+#~ msgid "Rapidite"
+#~ msgstr "Geschwindigkeit"
+
+#, fuzzy
+#~| msgid "fiabilité"
+#~ msgid "fiabilite"
+#~ msgstr "Zuverlässigkeit"
+
+#~ msgid "English"
+#~ msgstr "Englisch"
+
+#~ msgid "French"
+#~ msgstr "Französisch"

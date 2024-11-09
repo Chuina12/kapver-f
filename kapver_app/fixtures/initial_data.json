@@ -1,0 +1,32 @@
+[
+    {
+        "model": "kapver_app.banniere2",
+        "pk": 1,
+        "fields": {
+            "titre": "Weltweit spezialisierte Anwerbung und Vermittlung",
+            "image_caroussel2": "caroussel2/recrutement.jpg",
+            "description1":"Ich suche eine Stelle",
+            "description2":"Ich bin Personalvermittler"
+        }
+    },
+    {
+        "model": "kapver_app.banniere1",
+        "pk": 1,
+        "fields": {
+            "titre": "Ein spezialisierter Dienst mit menschlicher Dimension",
+            "image_caroussel1": "caroussel1/service.jpg",
+            "description":"Rekrutierungsspezialist für technische Ressourcen"
+        }
+    },
+    {
+        "model": "kapver_app.kapver_info",
+        "pk": 1,
+        "fields": {
+            "nom": "KapVer",
+            "image": "kapver_info/b.jpeg",
+            "specialisation": "Kapver, ein deutsches Unternehmen, ist darauf spezialisiert, Arbeitssuchende an die spezifischen Bedürfnisse von Unternehmen anzupassen. Sie rekrutiert qualifizierte Arbeitskräfte aus der ganzen Welt, um sie deutschen Unternehmen zur Verfügung zu stellen.",
+            "recrutement_international": "Insgesamt erleichtert Kapver die internationale Personalbeschaffung, indem es die Karrieremöglichkeiten zwischen Arbeitssuchenden und deutschen Unternehmen fördert.",
+            "critere": "Zuverlässigkeit,Qualität,Sicherheit,Schnelligkeit,Sicherheit,Zufriedenheit"
+        }
+    }
+]

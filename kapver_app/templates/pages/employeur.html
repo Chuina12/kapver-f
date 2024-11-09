@@ -1,0 +1,120 @@
+{% extends '../index.html' %}
+
+{% load i18n %}
+    
+{% block body %}
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">{% trans "Besoin de main d'oeuvres ?" %}</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Kapver</a></li>
+                            {% comment %} <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> {% endcomment %}
+                            {% comment %} <li class="breadcrumb-item text-white active" aria-current="page">About</li> {% endcomment %}
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    
+    {% trans "Besoin de main d'oeuvres ?" %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>{% trans "Vous aviez besoin de main d'oeuvre qualifier ?" %}</h1>
+            </div>
+            <div class='col-12'> <p>{% trans "En tant que professionnel expérimenté dans le domaine du recrutement, nous sommes bien conscient de l'importance de trouver les meilleurs talents pour votre entreprise. Cependant, nous comprennons également que ce processus peut être chronophage et exige beaucoup de ressources pour votre équipe actuelle. C'est pourquoi nous souhaitons vous proposer une solution qui vous permettra de vous concentrer sur vos priorités, tout en étant assuré d'avoir accès aux meilleurs candidats.
+
+               
+              En outre, nous nous engageons à maintenir une totale confidentialité tout au long du processus, en respectant vos exigences et en agissant de manière entièrement professionnelle." %}</p>
+            
+            
+                <p>{% trans "nous vous remercions sincèrement de prendre le temps de considérer cette proposition tout en espèrant avoir l'occasion de vous aider à trouver les meilleurs talents pour votre entreprise en remplicant le formulaire suivant." %}</p>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <div class="container" style="background-color: aliceblue">
+        <form method="post">
+{% csrf_token %}
+          {% for message in messages %}
+          <h1 class="alert alert-success">{% blocktrans %} {{message}} {% endblocktrans %}</h1>
+          {% endfor %}
+          
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example1" class="form-control" name="entreprise" style="border:1px solid bl" required/>
+                  <label class="form-label" for="form6Example1">{% trans "Nom entreprise" %}</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example2" name='phone' class="form-control" required/>
+                  <label class="form-label" for="form6Example2">{% trans "Numero Tel" %}</label>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Text input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="text" id="form6Example3" name="domain" class="form-control" required/>
+              <label class="form-label" for="form6Example3">{% trans "domaine d'expertise" %}</label>
+            </div>
+          
+            <!-- Text input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="text" name="adresse" id="form6Example4" class="form-control" required />
+              <label class="form-label" for="form6Example4">{% trans "Address" %}</label>
+            </div>  
+
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" name="adresse_email" id="form6Example4" class="form-control" required/>
+              <label class="form-label" for="form6Example4">{% trans "Address" %}</label>
+            </div>
+          
+            <!-- Email input -->
+            {% comment %} <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form6Example5" class="form-control" />
+              <label class="form-label" for="form6Example5">Email</label>
+            </div> {% endcomment %}
+          
+            <!-- Number input -->
+            
+          
+            <!-- Message input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <textarea class="form-control" id="form6Example7" name="message" rows="4"></textarea>
+              <label class="form-label" for="form6Example7">{% trans "Description du besoin" %}</label>
+            </div>
+          
+            <!-- Checkbox -->
+            <div class="form-check d-flex justify-content-center mb-4">
+              {% comment %} <input
+                class="form-check-input me-2"
+                type="checkbox"
+                value=""
+                id="form6Example8"
+                checked
+              /> {% endcomment %}
+              {% comment %} <label class="form-check-label" for="form6Example8"> Create an account? </label> {% endcomment %}
+            </div>
+          
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">{% trans "Soumettre" %}</button>
+          </form>
+    </div>
+    
+{%  endblock %}
+ 
+
+

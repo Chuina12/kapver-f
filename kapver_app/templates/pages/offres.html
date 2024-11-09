@@ -1,0 +1,70 @@
+{% extends '../index.html' %}
+
+{% block body %}
+
+{% load i18n %}
+{% load static %}
+
+
+<br><br>
+<center>
+  <div class="container">
+      <div class="row">
+        <div class="col-8"> <input type="text" class="form-control"> </div>
+        <div class="col-4"> <input type="submit" value="chercher" class="btn btn-info"></div>
+      </div>
+  </div>
+</center>
+
+<br><br><br>
+
+{% block job %}
+    <!-- Jobs Start -->
+    <div class="container-xxl py-5" style="background-color: rgb(216, 240, 240); width: 89%;">
+        <div class="container">
+            <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">{% trans "Offres d'emploi" %}                </h1>
+            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        {% for emploi in query %}
+
+                            <div class="job-item p-4 mb-4">
+                                <div class="row g-4">
+
+                                    <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid border rounded" src="{% static 'logo/kamga.jpg' %}" alt="" style="width: 80px; height: 60px;">
+                                        <div class="text-start ps-4">
+                                            <h3 class="mb-3">{{emploi.domain}}</h3>
+                                            <span class="text-truncate me-3" style="font-size: 18px;"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{emploi.lieu}}</span>
+                                            <span class="text-truncate me-3" style="font-size: 18px;"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
+                                            <!-- <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>{{emploi.salaire}} FCFA</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                        <div class="d-flex mb-3">
+                                            <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
+                                            <a href="details/{{emploi.pk}}" class="btn btn-primary" href="" style="font-size: 18px;">{% trans 'Postuler Maintenant' %}</a>
+                                        </div>
+                                        <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>{{emploi.date}}</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+                        <!-- <a class="btn btn-primary py-3 px-5" href="{% url 'offres' %}">Parcourir plus d'emplois</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jobs End -->
+{% endblock %}
+
+  <br><br>
+  <p style="color:red">{% trans "Si vous n'avez pas trouvé d'offres correspondant à votre profil parmi celles proposées par Kapver, soyez assuré(e) que vous pouvez toujours déposer une candidature. Kapver offre également la possibilité de trouver des offres plus intéressantes en fonction de votre profil" %} 
+
+    <a href="{% url 'candidature' %}"class='btn btn-success'>{% trans "candidature" %}</a>
+
+</p>
+{% endblock %}

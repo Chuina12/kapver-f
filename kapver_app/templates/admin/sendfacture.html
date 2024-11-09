@@ -1,0 +1,94 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Email | kapver.com</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="{% static 'email/css/main.css' %}" rel="stylesheet" media="all">
+</head>
+ <form method="POST" enctype="multipart/form-data">
+<body style="background-color: aliceblue;">
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">{% trans "die Rechnung verschicken" %} </h2>
+                  <center>  <a href="{% url 'dashboard' %}" class="btn btn-danger">{% trans "Accueil" %}</a></center>
+                </div>
+
+                {% for message in messages %}
+
+                    <h1 class="alert alert-success" style="color:aliceblue">  {% blocktrans %}{{message}}{% endblocktrans %}</h1>
+
+                {% endfor %}
+
+                <div class="card-body">
+                   
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="name">Objekt </div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="objects">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">E-Mail-Adresse</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com" value="{{collaborateur.email}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Nachricht</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="message" placeholder="Message sent to the employer"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Anhänge</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file" id="file" multiple>
+                                    <label class="label--file" for="file">Datei wählen</label>
+                                    <span class="input-file__info">Keine Datei ausgewählt</span>
+                                </div>
+                                <div class="label--desc">Anhänge</div>
+                            </div>
+                        </div>
+                  
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">schicken</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'email/vendor/jquery/jquery.min.js' %}"></script>
+
+
+    <!-- Main JS-->
+    <script src="{% static 'email/js/global.js' %}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+  </form>
+</html>
+<!-- end document-->

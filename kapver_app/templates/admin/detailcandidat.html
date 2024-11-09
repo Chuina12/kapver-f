@@ -1,0 +1,51 @@
+{% extends './dashboard.html' %}
+{% load i18n %}
+{% block main %}
+<br><br><br><br><br><br>
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <label for=""><h1>{% trans "offre" %} : {{obj.offre}}</h1></label>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-12">
+            <label for=""><h1>{% trans "nom" %} : {{obj.nom}}</h1></label>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+           {% trans "message" %}:" <cite>{{obj.message}}</cite>"
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+          <h1>{{obj.date}}</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <a href="/media/{{obj.cv}}"><h1>{% trans "voir son cv" %}</h1></a>
+        </div>
+    </div>
+    <a href="{% url 'candidat' %}"><input type="button" class="btn btn-secondary" value="zurück"></a>
+    <!-- <a href="{% url 'candidatureValide' %}"><input type="button" class="btn btn-primary" value="validere Kandidatur"></a> -->
+
+</div>
+{% endblock %}
+
+
+{% block aside %}
+
+
+{% endblock %}

@@ -1,0 +1,601 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Kapver</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+   <script src="//code.tidio.co/cs4gjnzactfvkr2jyxxputoey37hzen6.js" async></script>
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'logo/favicon.ico'%}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'logo/favicon.ico'%}" type="image/x-icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'tmp1/lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'tmp1/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'tmp1/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'tmp1/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+{% block nav %}
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="/" class="navbar-brand d-flex align-items-center ">
+            <img src="{% static 'logo/kamga.jpg' %}" alt="" style="width: 200px;height: 78px;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="https://www.facebook.com/kapver2024" class="nav-item nav-link active"><i class="bi bi-facebook"></i></a>
+                <a href="{% url 'employeur' %}" class="nav-item nav-link">{% trans "Employeur" %}</a>
+                <a href="{% url 'candidature' %}" class="nav-item nav-link">{% trans "Candidature" %}</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{% trans "Recrutement" %}</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="{% url 'offres' %}" class="dropdown-item">{% trans "Offres" %}</a>
+                        {% comment %} <a href="testimonial.html" class="dropdown-item">recrutement International</a> {% endcomment %}
+                        <a href="{% url 'conditions' %}" class="dropdown-item">{% trans  "Conditions" %}</a>
+                        {% comment %} <a href="/accounts/login/" class="dropdown-item">{% trans  "Connexion" %}</a> {% endcomment %}
+                    </div>
+                </div>
+                <a href="mailto:kontakt@kpaver.de" class="nav-item nav-link">{% trans "Contact"  %}</a>
+                <a href="/accounts/login" class="nav-item nav-link">{% trans "connexion"  %}</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">+49 17 26 71 98 21<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    {% endblock %}
+
+    {% block body %}
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                {% for item in banniere2 %}
+                    <img class="img-fluid" src="{{ item.image_caroussel2.url }}" alt="" style="height: 820px;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                        <div class="container">
+                            <div class="row justify-content-start" style="margin-left: 0px;">
+                                <center><h1 style="color:aliceblue;width:550px;">{{ item.titre }}</h1></center>
+
+
+                                <div class="col-6" style="width:400px;">
+                                    <div class="card" style="border: 1px solid rgb(204, 200, 200); border-radius:15px;background-color:blue; ">
+                                        <h5 class="card-header">1</h5>
+                                        <div class="card-body">
+                                        <h2 class="card-title" style="color: #ffffff;">{{ item.description1|safe }}</h2>
+                                        <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                        <center> <a href="{% url 'offres' %}" class="btn btn-primary" style="border: 1px solid blue; border-radius:10px; ">{% trans "Postuler maintenant" %}</a></center>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6" style="width:400px;">
+                                    <div class="card" style="border: 1px solid rgb(233, 143, 143); border-radius:15px;">
+                                        <h5 class="card-header">2</h5>
+                                        <div class="card-body">
+                                        <h2 class="card-title">{{ item.description2|safe }}</h2>
+                                        <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                        <center><a href="{% url 'employeur' %}" class="btn btn-primary" style="border: 1px solid blue; border-radius:10px; ">{% trans "Faire une offre maintenant" %}</a></center>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="owl-carousel-item position-relative">
+                {% for item in banniere1 %}
+                    <img class="img-fluid" src="{{ item.image_caroussel1.url }}" alt="" style="height: 820px;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-sm-10 col-lg-8">
+                                    <h3 class="text-primary text-uppercase mb-3 animated slideInDown">KapVer</h3>
+                                    <h1 class="display-3 text-white animated slideInDown">{{ item.titre }}</h1>
+                                    <p class="fs-5 text-white mb-4 pb-2" style="color: #ffffff;">{{ item.description|safe }}</p>
+                                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{% trans "en savoir plus" %}</a>
+                                    <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <!-- <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i> -->
+                            <h5 class="mb-3">{% trans "Placement Permanent" %}</h5>
+                            <p>{% trans "Tous nos placements permanents sont accompagnés d’une garantie de remplacement afin d’assurer la qualité du service qui vous est offert." %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <!-- <i class="fa fa-user-o" aria-hidden="true"></i> -->
+                            <h5 class="mb-3">{% trans "Placement Temporaire" %}</h5>
+                            <p>{% trans "Avez-vous un besoin de personnel pour surmonter une hausse de travail momentanée, ou pour travailler sur un nouveau projet, ou encore pour remplacer des salariés en congés ou en absence?"  %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <!-- <i class="fa fa-3x fa-home text-primary mb-4"></i> -->
+                            <h5 class="mb-3">{% trans "International" %}</h5>
+                            <p>{% trans "Kapver vous offrira tout le support nécessaire pour vous accompagner dans l’ensemble des étapes clés du processus de recrutement à l’international." %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <!-- <i class="fa fa-3x fa-book-open text-primary mb-4"></i> -->
+                            <h5 class="mb-3">{% trans "Book Library" %}</h5>
+                            <p>{% trans "Kapver peut s’occuper de tous vos processus en recrutement à même votre établissement afin de répondre au besoin de volume ou de spécialité technique de vos mains de d’œuvre." %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                {% for info in kapver_info %}
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="img-fluid position-absolute w-100 h-100" src="{{ info.image.url }}" alt="" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h6 class="section-title bg-white text-start text-primary pe-3">{% trans " à propos" %}</h6>
+                        <h1 class="mb-4">{% trans "Bienvenue à " %} {{ info.nom }}</h1>
+                        <p class="mb-4">
+                            {{ info.specialisation|safe }}
+
+                        </p>
+                        <p class="mb-4"> {{ info.recrutement_international|safe }} </p>
+                        <div class="row gy-2 gx-4 mb-4">
+                            {% for critere_item in info.critere_list %}
+                                <div class="col-sm-6" style="list-style-type: none; margin: 0; padding: 0;">
+                                    <p class="mb-0" style="display: flex; align-items: center;">
+                                        <i class="fa fa-arrow-right text-primary me-2" style="margin-right: 10px;"></i>{{ critere_item|safe }}
+                                    </p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {% comment %} <a class="btn btn-primary py-3 px-5 mt-2" href="">En Savoir plus</a> {% endcomment %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Categories Start -->
+    <div class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Kapver</h6>
+                <h1 class="mb-5">{% trans "Votre Choix"  %}</h1>
+            </div>
+            <div class="row g-3">
+
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <div class="card">
+                        <h5 class="card-header">{% trans "EMPLOYEURS" %}</h5>
+                        <div class="card-body">
+                          <!-- <h5 class="card-title">Special title treatment</h5> -->
+                          <p class="card-text">{% trans "KapVer a pour objectif de répondre rapidement et efficacement aux besoins des employeurs dans leur recherche de travailleurs qualifiés." %}</p>
+                        <center><a href="{% url 'employeur' %}" class="btn btn-primary">{% trans "Trouver des candidats" %}</a></center>
+                        </div>
+                      </div>
+                </div>
+
+
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <div class="card">
+                        <h5 class="card-header">{% trans "CANDIDATS" %}</h5>
+                        <div class="card-body">
+                          <!-- <h5 class="card-title">Special title treatment</h5> -->
+                          <p class="card-text">{% trans "KapVer a pour objectif de vous offrir une large sélection de poste afin d’intégrer des entreprises intéressantes et répondants à vos critères de choix.." %}</p>
+                        <center>  <a href="{% url 'employeur' %}" class="btn btn-primary">{% trans "Trouver des employeurs" %}</a></center>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Categories Start -->
+
+
+
+<div class="container" style="background-color: rgb(190, 241, 241);">
+    <div class="row">
+        <div class="col-12">
+            {% load i18n %}
+         <center>
+            <h1> {% trans  'Nous réalisons le parfait jumelage entre vous et le candidat idéal.' %} </h1></center>
+        </div>
+
+        <div class="col-12">
+            <p>
+                {% trans "En nous confiant la gestion de la recherche de vos employés ou de votre main d'œuvre, vous bénéficierez de nos compétences et de notre expertise afin de trouver des candidats hautement qualifiés et motivés, correspondant parfaitement à vos besoins spécifiques. nous nous occuperons de toutes les étapes du processus de recrutement, de la rédaction des offres d'emploi à la présélection des candidatures, en passant par les entretiens et les vérifications des références. Vous fournirons ensuite une sélection restreinte de candidats prêts à être présentés pour des entretiens finaux." %}
+            </p>
+        </div>
+<center>
+        <div class="col-6">
+           <a class="btn btn-success">{% trans "Commencer maintenant ! >" %}</a>
+        </div>
+</center>
+    </div>
+</div>
+
+{% block job %}
+    <!-- Jobs Start -->
+    <div class="container-xxl py-5" style="background-color: rgb(216, 240, 240); width: 89%;">
+        <div class="container">
+            <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">{% trans "Offres d'emplois" %}</h1>
+            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        {% for emploi in query %}
+                            {% if forloop.counter <= 5 %}
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+
+                                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="{% static 'logo/kamga.jpg' %}" alt="" style="width: 80px; height: 60px;">
+                                            <div class="text-start ps-4">
+                                                <h3 class="mb-3">{{emploi.domain}}</h3>
+                                                <span class="text-truncate me-3" style="font-size: 18px;"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{emploi.lieu}}</span>
+                                                <span class="text-truncate me-3" style="font-size: 18px;"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
+                                                <!-- <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>{{emploi.salaire}} FCFA</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
+                                                <a href="details/{{emploi.pk}}" class="btn btn-primary" href="" style="font-size: 18px;">{% trans 'Postuler Maintenant' %}</a>
+                                            </div>
+                                            <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>{{emploi.date}}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <a class="btn btn-primary py-3 px-5" href="{% url 'offres' %}">Parcourir plus d'emplois</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jobs End -->
+{% endblock %}
+
+    <!-- Team Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+                <h1 class="mb-5">Expert Instructors</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Instructor Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Instructor Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Instructor Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Instructor Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'tmp1/img/ent.jpg' %}" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    {% comment %} <h6 class="section-title bg-white text-start text-primary pe-3">a propos</h6> {% endcomment %}
+                    <h1 class="mb-4">{% trans "Avez-vous besoin du personnel qualifer ?" %}</h1>
+                    <p class="mb-4">
+                        {% trans "Kapver excelle dans la création de synergies professionnelles en connectant des talents qualifiés avec les besoins spécifiques des entreprises. Grâce à son expertise, Kapver orchestre des collaborations fructueuses en offrant un service qui va au-delà du simple recrutement. L'entreprise façonne des opportunités sur mesure, catalysant ainsi la croissance des entreprises tout en propulsant les carrières des professionnels vers de nouveaux sommets. En résumé, Kapver se positionne comme le catalyseur de succès, révolutionnant la manière dont les compétences exceptionnelles sont mises en valeur et exploitées dans le monde professionnel." %}
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    {% comment %} <h6 class="section-title bg-white text-start text-primary pe-3">a propos</h6> {% endcomment %}
+                    <h1 class="mb-4">{% trans "Vous recherchez un emploi ?" %}</h1>
+                    <p class="mb-4">
+                        {% trans "Kapver, entreprise allemande de renom, se distingue par son engagement à recruter à l'échelle mondiale. En tant que catalyseur de carrière, Kapver joue un rôle crucial en mettant en relation des chercheurs d'emploi talentueux avec des opportunités professionnelles au sein d'entreprises prestigieuses." %} <br>{% trans "Grâce à son réseau mondial, Kapver assure aux individus ambitieux la possibilité d'être recrutés par des employeurs recherchant des talents exceptionnels. L'entreprise s'engage à faciliter des rencontres professionnelles fructueuses, propulsant ainsi les carrières vers de nouveaux horizons et offrant aux entreprises des ressources humaines de premier ordre. En résumé, Kapver offre un pont vers le succès mondial en connectant de manière efficace chercheurs d'emploi et employeurs à travers le globe." %}
+
+                    </p>
+
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'tmp1/img/ch.jpg' %}" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">{% trans "Temoignages" %}</h6>
+                <h1 class="mb-5">{% trans "Temoignages" %}</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'tmp1/img/testimonial-1.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Lutresse</h5>
+                    <p>{% trans "Secretaire de direction" %}</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">{% trans "Pendant les semaines suivantes, j'ai été contactée régulièrement et on m'a proposé plusieurs postes qui correspondaient à mon profil et à mes attentes." %}</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'tmp1/img/testimonial-2.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Olivier</h5>
+                    <p>developpeur web</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">{% trans "Mon expérience avec Kapver a été un véritable tournant dans ma carrière de développeur. Après avoir traversé une période de chômage, C'est alors que j'ai découvert Kapver. Et pendant les semaines qui ont suivi ma decouverte ils m'ont proposés des postes qui correspondaient à mon profil de developpeur et à mes attentes" %}</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'tmp1/img/testimonial-3.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Lucien</h5>
+                    <p>Recruteur</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">{% trans "En tant que recruteur pour une entreprise en plein essor, j'ai été confronté à un défi de taille : trouver des candidats qualifiés pour pourvoir nos postes vacants dans un délai serré. C'est à ce moment-là que nous avons eu la chance de collaborer avec Kapver, Grâce à leur vaste réseau ils ont pu rapidement nous trouvés des candidats qualifiés pour nos postes vacants" %}</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'tmp1/img/testimonial-4.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Emma</h5>
+                    <p>{% trans "Institutrice" %}</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">{% trans "Mon parcours en tant qu'institutrice a connu des hauts et des bas, mais rien ne m'avait préparée à la période de chômage que j'ai traversée il y a quelques mois. C'est à ce moment-là que j'ai découvert Kapver. Grâce à Kapver, j'ai pu décrocher un poste dans une école qui correspondait parfaitement à mes valeurs éducatives et à ma philosophie pédagogique." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    {% endblock %}
+    <!-- Footer Start -->
+    {% block footer %}
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">{% trans "Lien rapide" %}</h4>
+                    <a class="btn btn-link" href="">{% trans "Employeur" %}</a>
+                    <a class="btn btn-link" href="">{% trans "Candidature" %} </a>
+                    <a class="btn btn-link" href="">{% trans "offre" %}</a>
+                    <a class="btn btn-link" href=""> {% trans "Condition" %}</a>
+                    {% comment %} <a class="btn btn-link" href="">FAQs & Help</a> {% endcomment %}
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Eichenstrasse 5, 47665 Sonsbeck</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+49 17 26 71 98 21</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>kontakt@kapver.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                {% block gallery %}
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">{% trans "Notre Qrcode" %}</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-12">
+                            <img class="img-fluid bg-light p-1" src="{% static 'qr/qr.png' %}" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+                {% endblock %}
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">{% trans "Newsletter" %}</h4>
+                    <p>{% trans "Souscrire a notre NewsLetter" %}</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Kapver</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="github.com/chuina12">thierry</a><br><br>
+
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">{% trans "Home" %}</a>
+                            <a href="">{% trans "Cookies" %}</a>
+                            <a href="">{% trans "Help"  %}</a>
+                            <a href="">{% trans "FQAs" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    {% endblock %}
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'tmp1/lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'tmp1/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'tmp1/lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'tmp1/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'tmp1/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urlaubsantrag</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5 mb-4">Urlaubsantrag</h2>
+        <form  method="post">
+          {% csrf_token %}
+
+          <select name="entreprise" class="form-control">
+            {% for entreprise in verify %}
+            <option>{{entreprise.entreprise}}</option>
+            {% endfor %}
+          </select>
+
+            <div class="form-group">
+                <label for="name">Name, Vorname:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="geb">Geb. am:</label>
+                <input type="date" class="form-control" id="geb" name="geb">
+            </div>
+            <div class="form-group">
+                <label for="personalnummer">Personalnummer:</label>
+                <input type="number" class="form-control" id="personalnummer" name="personalnummer">
+            </div>
+            <div class="form-group">
+                <label for="urlaubsantrag">Betreff: Urlaubsantrag bis</label>
+                <div class="row">
+                    <div class="col">
+                        <input type="date" class="form-control" id="von" name="von" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="col">
+                        <input type="date" class="form-control" id="bis" name="bis" placeholder="YYYY-MM-DD">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="resturlaub">Bei meinen Urlaubstagen handelt es sich um:</label>
+                <input type="text" class="form-control" id="resturlaub" name="resturlaub">
+                <small id="resturlaubHelp" class="form-text text-muted">(Tage aus dem Vorjahr - Resturlaub)</small>
+            </div>
+            <div class="form-group">
+                <label for="diesesjahr">Tage aus dem Vorjahr (Resturlaub)</label>
+                <input type="number" class="form-control" id="diesesjahr" name="diesesjahr">
+                <small id="diesesjahrHelp" class="form-text text-muted">(Tage aus diesem Jahr)</small>
+            </div>
+            <div class="form-group">
+                <label for="datum_antrag">und um</label>
+                <input type="date" class="form-control" id="datum_antrag" name="datum_antrag" placeholder="YYYY-MM-DD">
+            </div>
+
+            <div class="form-group">
+                <label for="datum_antrag">Datum des Antrags</label>
+                <input type="date" class="form-control" id="datum_des_antrag" name="datum_des_antrag" placeholder="YYYY-MM-DD">
+            </div>
+
+            <div class="form-group">
+                <label for="unterschrift_arbeitnehmer">(Unterschrift des Arbeitnehmers):</label>
+                <input type="text" class="form-control" id="unterschrift_arbeitnehmer" name="unterschrift_arbeitnehmer">
+            </div>
+            {% comment %} <div class="form-group">
+                <label for="begrundung_arbeitgeber">Antwort des Arbeitgebers:</label>
+                <textarea class="form-control" id="begrundung_arbeitgeber" name="begrundung_arbeitgeber"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="unterschrift_arbeitgeber">(Unterschrift des Arbeitgebers):</label>
+                <input type="text" class="form-control" id="unterschrift_arbeitgeber" name="unterschrift_arbeitgeber">
+            </div> {% endcomment %}
+            <button type="submit" class="btn btn-primary">Antrag absenden</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

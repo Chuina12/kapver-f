@@ -1,0 +1,114 @@
+{% extends './dashboard.html' %}
+
+{% load i18n %}
+
+{% block main %}
+<br><br><br><br><br><br>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    {% trans "Ajouter un collaborateur" %}
+  </button>
+
+  <center> <a href="{% url 'dashboard'  %}" class="btn btn-danger">{% trans "Retour" %}</a>  </center>
+  <br><br><br>
+  {% for message in messages %}
+    <h1 class="alert alert-info">{{message}}</h1>
+    {% endfor %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">{% trans "Nom" %}</th>
+        <th scope="col">{% trans "Email" %}</th>
+        <th scope="col">{% trans "date" %}</th>
+        <th scope="col">{% trans "Action 1" %}</th>
+        {% comment %} <th scope="col">Action 2</th> {% endcomment %}
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for item in query %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{item.nom}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.pays}}</td>
+        <td>{{item.date}}</td>
+       
+        <td><a href="/sendemail/{{item.id}}" class="btn btn-info">faire un mail</a></td>
+       
+      </tr>
+     {% endfor %}
+     
+    </tbody>
+
+    <script>
+        // Charger la liste des codes de pays via une API
+        fetch('https://restcountries.com/v2/all')
+            .then(response => response.json())
+            .then(data => {
+                const selectElement = document.getElementById('code_pays');
+                
+                // Ajouter chaque code de pays à la liste déroulante
+                data.forEach(country => {
+                    if (country.hasOwnProperty('callingCodes') && country.callingCodes.length > 0) {
+                        const code = country.callingCodes[0];
+                        const option = document.createElement('option');
+                        option.value = code;
+                        option.text = `${country.name} (+${code})`;
+                        selectElement.appendChild(option);
+                    }
+                });
+            })
+            .catch(error => console.error('Erreur lors du chargement des codes de pays :', error));
+    </script>
+  </table>
+  <form  method="post">
+{% csrf_token %}
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{% trans "collaborateur" %}</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <label for="">{% trans "Nom collaborateur" %}</label>
+            <input type="text" name="nom" class="form-control" required> <br>
+
+            <label for="">{% trans "email" %}</label>
+            <input type="email" class="form-control" name="email" required> <br>
+
+
+            <label for="">pays</label>
+            <input type="text" class="form-control" name="pays" required> <br>
+
+
+            <label for="">{% trans "adresse" %}</label>
+            <input type="text" class="form-control" name="adresse" required> <br>
+
+            <label for="code_pays">{% trans "Code de pays :" %}</label> <br>
+            <select id="code_pays" name="code_pays" required>
+                <!-- Options seront ajoutées dynamiquement via JavaScript -->
+            </select> <br> <br>
+
+            <label for="">{% trans "numero tel" %}</label>
+            <input type="tel" id="telephone" class="form-control" name="numero" placeholder="Ex: 123456789" required ">
+            
+
+        </div>
+        <div class="modal-footer">
+          <button type="button"  onclick="obtenirCodesPays();" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Fermer" %}</button>
+          <button type="submit" class="btn btn-primary">{% trans "Enregistrer" %}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}
+
+
+{% block aside %}
+{% endblock %}

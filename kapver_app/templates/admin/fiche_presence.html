@@ -1,0 +1,87 @@
+{% extends './dashboard.html' %}
+
+
+{% load i18n %}
+
+{% block main %}
+<br><br><br><br><br><br><br><br>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Employer</th>
+      <th scope="col">fiche presence</th>
+      <th scope="col">signature</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in mes_emp %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{i.employer}}</td>
+      <td><a href="/media/{{i.fiche}}"><i class="bi bi-file-pdf"> Voir</i></a></td>
+      {% if i.valider == True and i.signer_entreprise == False %}
+
+
+      <td><a href="signe_fiche/{{i.pk}}" class="btn btn-success">Signe</a></td>
+       {% else %}
+       
+      {% endif %} 
+    </tr>
+ 
+    {% endfor %}
+
+  </tbody>
+</table>
+<hr class="form-control">
+
+<br><br><br><br><br>
+
+<form method="get">
+  {% csrf_token %}
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <input type="text" class="form-control" name="search" required>
+    </div>
+    <div class="col-3"><input type="submit"></div>
+  </div>
+</div>
+</form>
+<br><br>
+
+{% for message in messages %}
+<h1 class="alert alert-dark">{{message}}</h1>
+
+{% endfor %}
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Employer</th>
+        <th scope="col">fiche presence</th>
+        <th scope="col">date</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in mes_emp2 %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{i.employer}}</td>
+        <td><a href="/media/{{i.fiche}}"><i class="bi bi-file-pdf"> Voir</i></a></td>
+       
+
+
+        <td>{{i.date}}</td>
+        
+      </tr>
+   
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends './dashboard.html' %}
+
+{% load i18n %}
+
+{% block main %}
+<br><br><br><br><br><br>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">{% trans "entreprise" %}</th>
+        <th scope="col">{% trans "domain" %}</th>
+        <th scope="col">{% trans "voir" %}</th>
+        <th scope="col">{% trans "Action 1" %}</th>
+        <th scope="col">{% trans "Action 2" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for item in candidat_ent %}
+      <tr>
+        <th scope="row">1</th>
+        <td>{{item.entreprise}}</td>
+        <td>{{item.domain}}</td>
+        <td><a href="detailentreprise/{{item.pk}}"><i class="bi bi-eye"></i></a></td>
+        <td><a href="supprimerentreprise/{{item.pk}}" class="btn btn-danger">Supprimer</a></td>
+        <td><a href="lectureEntreprise/{{item.pk}}" class="btn btn-info">Lu</a></td>
+      </tr>
+     {% endfor %}
+     
+    </tbody>
+  </table>
+{% endblock %}
+
+
+{% block aside %}
+{% endblock %}
